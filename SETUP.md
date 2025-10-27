@@ -4,10 +4,21 @@ This guide will help you set up the UTEC Voice Assistant on your machine.
 
 ## Prerequisites
 
-- Python 3.9 or higher
+- **Python 3.9, 3.10, or 3.11** (Required: TTS library does not support Python 3.12+)
 - CUDA-capable NVIDIA GPU with at least 12GB VRAM
 - CUDA Toolkit 11.8 or higher
 - ~30GB free disk space for models
+
+**Important**: If you have Python 3.12 or newer, you'll need to create a Python 3.11 environment:
+```bash
+# Using conda
+conda create -n voice-assistant python=3.11
+conda activate voice-assistant
+
+# Or using pyenv
+pyenv install 3.11.9
+pyenv local 3.11.9
+```
 
 ## Installation Steps
 

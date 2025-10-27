@@ -44,9 +44,11 @@ utec-voice-assistant/
 
 ## Requirements
 
-- Python 3.9+
+- **Python 3.9, 3.10, or 3.11** (TTS library does not support Python 3.12+)
 - CUDA-capable GPU with <12GB VRAM
 - PyTorch with CUDA support
+
+**Note**: If using Python 3.12+, create a Python 3.11 environment first (see [SETUP.md](SETUP.md))
 
 ## Installation
 
