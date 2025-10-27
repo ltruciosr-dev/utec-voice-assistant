@@ -1,0 +1,94 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyTorch & Model Caches
+*.pth
+*.pt
+*.bin
+*.safetensors
+models/
+.cache/
+huggingface/
+
+# Audio Files
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+test_output*.wav
+output*.wav
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+
+# Test files
+test_*.py
+temp/
+tmp/
+
+# Documentation builds
+docs/_build/
+site/
+
+# Model checkpoints
+checkpoints/
+*.ckpt
+
+# Data
+data/
+datasets/
+*.csv
+*.json
+*.txt
+
+# Exclude specific files
+!requirements.txt
+!README.md
+!SETUP.md

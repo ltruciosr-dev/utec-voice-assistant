@@ -1,0 +1,33 @@
+# Voice Assistant Configuration
+
+# ASR Configuration
+asr:
+  model_size: "small"  # Options: "small" or "turbo"
+  language: "spanish"
+  compute_type: "float16"
+  chunk_length_s: 30
+  batch_size: 16
+
+# LLM Configuration
+llm:
+  model_id: "Qwen/Qwen2.5-7B-Instruct"
+  quantization: "4bit"  # Options: "4bit", "8bit", or "none"
+  max_new_tokens: 512
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  repetition_penalty: 1.1
+  system_prompt: "Eres un asistente de voz útil y amigable. Responde de manera concisa, clara y en español."
+
+# TTS Configuration
+tts:
+  model_name: "tts_models/multilingual/multi-dataset/xtts_v2"
+  language: "es"
+  speed: 1.0
+  speaker_wav: null  # Path to reference speaker audio for voice cloning (optional)
+
+# Voice Assistant Behavior
+assistant:
+  max_conversation_history: 10  # Number of turns to keep in memory
+  response_max_length: 200  # Maximum words in response
+  enable_voice_activity_detection: false  # VAD for better turn-taking (future feature)

@@ -1,0 +1,39 @@
+# Core dependencies
+torch>=2.0.0
+torchaudio>=2.0.0
+
+# Transformers and HuggingFace
+transformers>=4.35.0
+accelerate>=0.24.0
+sentencepiece>=0.1.99
+
+# Quantization
+bitsandbytes>=0.41.0
+
+# ASR (Automatic Speech Recognition)
+datasets>=2.14.0
+librosa>=0.10.0
+soundfile>=0.12.0
+
+# TTS (Text-to-Speech)
+TTS>=0.22.0  # Coqui TTS for XTTS-v2
+num2words>=0.5.12
+
+# Audio processing
+numpy>=1.24.0
+scipy>=1.11.0
+sounddevice>=0.4.6  # For microphone recording in notebooks
+pandas>=2.0.0  # For data analysis in notebooks
+ipython>=8.0.0  # For notebook display utilities
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0
+
+# Optional: For better performance
+# triton>=2.0.0  # Uncomment if using Linux/WSL for optimized kernels
+
+# Development dependencies (optional)
+# jupyter>=1.0.0
+# matplotlib>=3.7.0
+# ipywidgets>=8.0.0
