@@ -115,13 +115,30 @@ result = run_full_pipeline(
 
 ## Getting Started
 
-### 1. Install Dependencies
+### Option 1: Google Colab (Recommended for beginners)
+
+Each notebook can run independently on Google Colab with GPU support:
+
+1. **Upload to Colab**: Click on a notebook in GitHub → "Open in Colab" badge (or upload manually)
+2. **Run Setup Cell**: Execute the first code cell (Colab Setup)
+   - Automatically clones the repository
+   - Installs all dependencies
+   - Verifies GPU access
+3. **Continue with rest of notebook**: All code cells will work after setup
+
+**Important**:
+- Update the GitHub URL in the setup cell: Replace `YOUR_USERNAME` with your GitHub username
+- Make sure to enable GPU: Runtime → Change runtime type → GPU (T4 recommended)
+
+### Option 2: Local Installation
+
+#### 1. Install Dependencies
 
 ```bash
 pip install -r ../requirements.txt
 ```
 
-### 2. Install Jupyter
+#### 2. Install Jupyter
 
 ```bash
 pip install jupyter notebook
@@ -129,7 +146,7 @@ pip install jupyter notebook
 pip install jupyterlab
 ```
 
-### 3. Launch Jupyter
+#### 3. Launch Jupyter
 
 ```bash
 # From notebooks directory
@@ -263,12 +280,38 @@ os.environ['TRANSFORMERS_CACHE'] = '/path/to/large/storage'
 - TTS: ~20-30% of time
 - Overhead: ~20-25% of time
 
+## Google Colab Setup Details
+
+All notebooks include an automated setup cell that:
+
+```python
+# Detects if running in Colab
+# Clones repository: git clone https://github.com/YOUR_USERNAME/utec-voice-assistant.git
+# Installs PyTorch with CUDA
+# Installs all requirements
+# Verifies GPU availability
+```
+
+**Before running on Colab**:
+1. Update the GitHub URL in the first code cell
+2. Enable GPU runtime (Runtime → Change runtime type → GPU)
+3. Run the setup cell (first code cell)
+4. Wait for installation (~2-3 minutes)
+5. Continue with the rest of the notebook
+
+**Colab Tips**:
+- T4 GPU (15GB VRAM) works great for all notebooks
+- Save outputs to Google Drive if needed
+- Runtime disconnects after ~12 hours of inactivity
+- Re-run setup cell if runtime disconnects
+
 ## Additional Resources
 
 - [Whisper Documentation](https://github.com/openai/whisper)
 - [Qwen2.5 Model Card](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)
 - [XTTS-v2 Documentation](https://docs.coqui.ai/en/latest/models/xtts.html)
 - [BitsAndBytes Quantization](https://github.com/TimDettmers/bitsandbytes)
+- [Google Colab Guide](https://colab.research.google.com/)
 
 ## Contributing
 
