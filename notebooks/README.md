@@ -127,7 +127,7 @@ Each notebook can run independently on Google Colab with GPU support:
 3. **Continue with rest of notebook**: All code cells will work after setup
 
 **Important**:
-- Update the GitHub URL in the setup cell: Replace `YOUR_USERNAME` with your GitHub username
+- Update the GitHub URL in the setup cell: Replace `ltruciosr-dev` with your GitHub username
 - Make sure to enable GPU: Runtime → Change runtime type → GPU (T4 recommended)
 
 ### Option 2: Local Installation
@@ -286,7 +286,7 @@ All notebooks include an automated setup cell that:
 
 ```python
 # Detects if running in Colab
-# Clones repository: git clone https://github.com/YOUR_USERNAME/utec-voice-assistant.git
+# Clones repository: git clone https://github.com/ltruciosr-dev/utec-voice-assistant.git
 # Installs PyTorch with CUDA
 # Installs all requirements
 # Verifies GPU availability
